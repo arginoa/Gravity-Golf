@@ -1,0 +1,158 @@
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #070912;
+  color: #fff;
+}
+
+.wrap {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hud {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 5;
+  width: min(460px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.hudCard {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.hudTitle {
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  opacity: 0.9;
+  margin: 0 0 6px 0;
+}
+
+.hudRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.pill {
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  opacity: 0.92;
+}
+
+.msg {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.85;
+  line-height: 1.35;
+}
+
+.controls {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 6;
+  width: min(820px, calc(100vw - 24px));
+  pointer-events: auto;
+}
+
+.controlsCard {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.small {
+  opacity: 0.8;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.55);
+}
+
+.panel {
+  width: min(760px, calc(100vw - 28px));
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bigTitle {
+  margin: 0 0 8px 0;
+  font-weight: 1000;
+  letter-spacing: 0.14em;
+  font-size: 26px;
+}
+
+.sub {
+  margin: 0 0 14px 0;
+  opacity: 0.85;
+  line-height: 1.35;
+}
